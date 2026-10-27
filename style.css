@@ -1,0 +1,186 @@
+:root {
+  --fondo: #f3f6fb;
+  --tarjeta: #ffffff;
+  --texto: #172033;
+  --secundario: #637089;
+  --primario: #2457d6;
+  --borde: #dce3ef;
+  --verde: #147d55;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+.hero {
+  padding: 42px 20px;
+  color: white;
+  text-align: center;
+  background: linear-gradient(135deg, #152b61, #2869d8);
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.3rem);
+}
+
+.hero p {
+  color: #e1eaff;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+nav a {
+  padding: 9px 15px;
+  color: white;
+  text-decoration: none;
+  border: 1px solid #ffffff70;
+  border-radius: 8px;
+}
+
+nav a:hover {
+  background: #ffffff20;
+}
+
+main {
+  width: min(1100px, 92%);
+  margin: 30px auto;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.panel,
+.ejercicio {
+  padding: 24px;
+  margin-bottom: 24px;
+  background: var(--tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: 14px;
+  box-shadow: 0 5px 18px #17203308;
+}
+
+.formula-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.formula-grid article {
+  padding: 15px;
+  background: #f7f9ff;
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+}
+
+.formula {
+  font-family: "Cambria Math", Georgia, serif;
+  font-size: 1.05rem;
+  color: var(--primario);
+}
+
+.ejercicio h3 {
+  margin-top: 0;
+  color: var(--primario);
+}
+
+.datos {
+  color: var(--secundario);
+  font-size: 0.95rem;
+}
+
+.paso {
+  padding: 13px 16px;
+  margin: 12px 0;
+  overflow-x: auto;
+  background: #f7f9fc;
+  border-left: 4px solid var(--primario);
+  border-radius: 5px;
+}
+
+.matematica {
+  font-family: "Cambria Math", Georgia, serif;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.resultados {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.resultado {
+  padding: 14px;
+  background: #eef4ff;
+  border-radius: 9px;
+}
+
+.resultado strong {
+  display: block;
+  color: var(--primario);
+  font-size: 1.15rem;
+}
+
+.grafico {
+  width: 100%;
+  height: 300px;
+  display: block;
+  margin: 15px 0;
+  border: 1px solid var(--borde);
+  border-radius: 9px;
+  background: white;
+}
+
+.conclusion {
+  padding: 15px;
+  background: #ecf8f1;
+  border-left: 4px solid var(--verde);
+  border-radius: 6px;
+}
+
+.conclusion strong {
+  color: var(--verde);
+}
+
+.nota {
+  padding: 12px;
+  background: #fff8e8;
+  border-left: 4px solid #d99a16;
+  border-radius: 6px;
+}
+
+footer {
+  padding: 24px;
+  color: white;
+  text-align: center;
+  background: #152b61;
+}
+
+@media (max-width: 600px) {
+  .panel,
+  .ejercicio {
+    padding: 16px;
+  }
+
+  .grafico {
+    height: 250px;
+  }
+}
